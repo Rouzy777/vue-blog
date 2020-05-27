@@ -5,7 +5,7 @@ import store from './store'
 import Butter from 'buttercms'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-export const butter = Butter('509a8ddfff4c34343a0357de81be530073696e53')
+export const butter = Butter(process.env.VUE_APP_API_KEY)
 
 Vue.config.productionTip = false
 
