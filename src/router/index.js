@@ -10,9 +10,19 @@ const routes = [
         component: () => import('../views/Home.vue')
     },
     {
+        path: '/categories',
+        name: 'categories',
+        component: () => import('../views/Categories.vue')
+    },
+    {
         path: '/:slug',
         name: 'post',
         component: () => import('../views/Post.vue')
+    },
+    {
+        path: '/categories/:slug',
+        name: 'category',
+        component: () => import('../views/Category.vue')
     }
 ]
 

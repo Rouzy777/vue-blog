@@ -1,5 +1,5 @@
 <template>
-<div class='container px-0 mt-4'>
+<div class='container mt-4'>
     <div>
         <span v-for='(category, index) in post.data.categories' :key='`category-${index}`' class='badge badge-pill badge-primary'>{{category.name}}</span>
     </div>
@@ -17,24 +17,14 @@ export default {
 	data: () => ({
 		post: {}
 	}),
-	methods: {
-		getPost() {
-			butter.post.retrieve(this.$route.params.slug)
-				.then(res => {
-					// console.log(res.data)
-					this.post = res.data
-				}).catch(res => {
-					console.log(res)
-				})
-		}
-	},
-	watch: {
-		$route: {
-			immediate: true,
-			handler() {
-				this.getPost()
-			}
-		}
+	created() {
+		butter.post.retrieve(this.$route.params.slug)
+			.then(res => {
+				// console.log(res.data)
+				this.post = res.data
+			}).catch(res => {
+				console.log(res)
+			})
 	}
 }
 </script>
