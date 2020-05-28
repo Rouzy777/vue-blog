@@ -1,16 +1,13 @@
 <template>
-    <div class="container mt-4">
-        <h1 class='pb-3 border-bottom'>Категории</h1>
-        <div class="row mx-auto mt-4">
-            <div v-for='category in categories' :key='category.name' class="col-lg-4 col-md-6 col-12">
-                <div class="rounded bg-gray p-3">
-                    <h4>
-                        <router-link tag='a' :to='/categories/ + category.slug'>{{category.name}}</router-link>
-                    </h4>
-                </div>
-            </div>
+<div>
+    <div v-for='category in categories' :key='category.name' class="col-lg-4 col-md-6 col-12 my-lg-0 my-2">
+        <div class="rounded bg-gray p-3">
+            <h4>
+                <router-link tag='a' :to='/categories/ + category.slug'>{{category.name}}</router-link>
+            </h4>
         </div>
     </div>
+</div>
 </template>
 
 <script>

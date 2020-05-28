@@ -15,7 +15,7 @@
 			</div>
 		</div>
 	</nav>
-	<router-view />
+	<router-view class='container mt-4' />
 </div>
 </template>
 
@@ -25,11 +25,11 @@ export default {
 	data: () => ({
 		links: [{
 				link: "/",
-				title: "Home"
+				title: "Главная"
 			},
 			{
 				link: "/categories",
-				title: "Categories"
+				title: "Категории"
 			}
 		]
 	})

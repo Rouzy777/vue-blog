@@ -1,5 +1,5 @@
 <template>
-<div class='container mt-4'>
+<div>
 	<h1 class='pb-3 border-bottom'>Главная</h1>
 	<div class="row mx-auto">
 		<div v-for='(post, index) in posts' :key='`${post.slug}_${index}`' class="col-lg-4 col-md-6 col-12 p-3">
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import {butter} from '@/main.js'
+import { butter } from '@/main.js'
 
 export default {
 	data: () => ({

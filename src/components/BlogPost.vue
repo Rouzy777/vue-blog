@@ -1,8 +1,6 @@
 <template>
-<div class='container mt-4'>
-    <div>
-        <span v-for='(category, index) in post.data.categories' :key='`category-${index}`' class='badge badge-pill badge-primary'>{{category.name}}</span>
-    </div>
+<div>
+    <span v-for='(category, index) in post.data.categories' :key='`category-${index}`' class='badge badge-pill badge-primary'>{{category.name}}</span>
 	<h1>{{post.data.title}}</h1>
     <h5 class='text-muted'>Дата публикации: {{new Date(post.data.published).toLocaleDateString("ru-RU")}}</h5>
 	<div class='mt-4 page-content' v-html="post.data.body"></div>
@@ -15,7 +13,11 @@ import { butter } from '@/main.js'
 
 export default {
 	data: () => ({
-		post: {}
+		post: {
+            data: {
+                author: {}
+            }
+        }
 	}),
 	created() {
 		butter.post.retrieve(this.$route.params.slug)

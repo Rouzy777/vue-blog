@@ -1,7 +1,7 @@
 <template>
-<div>
-    <BlogPost></BlogPost>
-</div>
+    <div>
+        <BlogPost></BlogPost>
+    </div>
 </template>
 
 <script>

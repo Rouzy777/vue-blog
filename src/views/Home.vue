@@ -1,7 +1,7 @@
 <template>
-<div>
-	<BlogHome></BlogHome>
-</div>
+	<div>
+		<BlogHome></BlogHome>
+	</div>
 </template>
 
 <script>

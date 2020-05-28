@@ -1,7 +1,7 @@
 <template>
-<div>
-	<BlogCategory></BlogCategory>
-</div>
+	<div>
+		<BlogCategory></BlogCategory>
+	</div>
 </template>
 
 <script>
